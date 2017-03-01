@@ -11,11 +11,27 @@ describe('CommentBox', () => {
     it('has a text area', () => {
       expect(component.find('textarea')).to.exist
     })
+
     it('has a button', () => {
       expect(component.find('button')).to.exist
     })
+
     it('has a className of comment-box', () => {
       expect(component).to.have.class('comment-box')
     })
 
+    describe('entering some text', () => {
+
+      beforeEach(() => {
+        component.find('textarea').simulate('change', 'new comment')
+      })
+
+      it('shows text in the text area', () => {
+        expect(component.find('textarea')).to.have.value('new comment')
+      })
+
+      it('when submitted, clears the input', () => {
+
+      })
+    })
 })
