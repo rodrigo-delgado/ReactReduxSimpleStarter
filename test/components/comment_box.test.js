@@ -10,4 +10,8 @@ describe('CommentBox', () => {
     const component = renderComponent(CommentBox)
     expect(component.find('button')).to.exist
   })
+  it('has a className of comment-box', () => {
+    const component = renderComponent(CommentBox)
+    expect(component).to.have.class('comment-box')
+  })
 })
